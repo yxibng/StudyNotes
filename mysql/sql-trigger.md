@@ -1,0 +1,32 @@
+
+# date, datetime, timestamp 
+
+- date: YYYY-MM-DD
+- dateTime: YYYY-MM-DD HH:mm:ss
+- timestamp YYYY-MM-DD HH:mm:ss UTC
+
+## 表示当前时间
+- CURRENT_TIMESTAMP()
+- NOW() 
+- LOCALTIME 
+- LOCALTIME() 
+- LOCALTIMESTAMP
+- LOCALTIMESTAMP()
+
+
+## TIMESTAMP和DATETIME的自动初始化与更新
+
+```sql
+CREATE TABLE t1 (
+  ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  dt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+```
+
+
+[MySQL中有关TIMESTAMP和DATETIME的总结](https://www.cnblogs.com/ivictor/p/5028368.html)
+
+
+
+
+
