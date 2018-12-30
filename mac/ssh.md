@@ -21,14 +21,14 @@
     id_rsa.pub
     ```
 
-    针对不同的场景，可以取不同的名字
+    针对不同的场景，可以取不同的名字
 
     ```
     ➜  .ssh ls
     bwg_id_rsa        config            github_id_rsa.pub id_rsa.pub
     bwg_id_rsa.pub    github_id_rsa     id_rsa            known_hosts
     ```
-2. add to ssh-agent
+2. add to ssh-agent
 
     start ssh-agent 
     ```
