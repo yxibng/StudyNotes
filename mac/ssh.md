@@ -7,7 +7,7 @@
 - [https://www.ssh.com/ssh/](https://www.ssh.com/ssh/)
 - [https://help.ubuntu.com/lts/serverguide/openssh-server.html.en](https://help.ubuntu.com/lts/serverguide/openssh-server.html.en)
 
-## github ssh 
+## github ssh 
 1. create a new ssh key
 
     ``` bash
@@ -46,7 +46,7 @@
      IdentityFile ~/.ssh/id_rsa
     ```
 
-    可以有不同的配置，参考[SSH Config 那些你所知道和不知道的事](https://deepzz.com/post/how-to-setup-ssh-config.html)
+    可以有不同的配置，参考[SSH Config 那些你所知道和不知道的事](https://deepzz.com/post/how-to-setup-ssh-config.html)
 
     我的配置如下
     ```
@@ -68,7 +68,7 @@
     ```
 
 
-    ssh-add 命令
+    ssh-add 命令
 
     ```
     ➜  .ssh ssh-add --help
@@ -78,7 +78,7 @@
     ssh-add -K
     ```
 
-    重启ssh-agent
+    重启 ssh-agent
     
     ```
     killall ssh-agent; eval `ssh-agent`
@@ -102,7 +102,7 @@
     Hi yxibng! You've successfully authenticated, but GitHub does not provide shell access.
     ```
 
-## ubuntu ssh 远程登录
+## ubuntu ssh 远程登录
 
 1. create ssh keys
 
@@ -114,7 +114,7 @@
     > bwg_id_rsa </br>
     > bwg_id_rsa.pub
 
-2. add to ssh-agent， 参考上面的步骤
+2. add to ssh-agent， 参考上面的步骤
 3. copy `xx.pub` to the remote host
 
     ```
