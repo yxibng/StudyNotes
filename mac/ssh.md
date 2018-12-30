@@ -95,6 +95,13 @@
     pbcopy < ~/.ssh/id_rsa.pub
     # Copies the contents of the id_rsa.pub file to your clipboard
     ```
+
+    测试ssh是否成功
+    ```
+    ➜  ~ ssh -T git@github.com
+    Hi yxibng! You've successfully authenticated, but GitHub does not provide shell access.
+    ```
+
 ## ubuntu ssh 远程登录
 
 1. create ssh keys
