@@ -41,9 +41,9 @@
 
     ```
     Host *
-    AddKeysToAgent yes
-    UseKeychain yes
-    IdentityFile ~/.ssh/id_rsa
+     AddKeysToAgent yes
+     UseKeychain yes
+     IdentityFile ~/.ssh/id_rsa
     ```
 
     可以有不同的配置，参考[SSH Config 那些你所知道和不知道的事](https://deepzz.com/post/how-to-setup-ssh-config.html)
@@ -51,16 +51,14 @@
     我的配置如下
     ```
     ➜  .ssh cat config
-    Host github
-    HostName github.com
-    User yxibng
-    AddKeysToAgent yes
-    UseKeychain yes
-    IdentityFile ~/.ssh/github_id_rsa
-    Host bwg
-    AddKeysToAgent yes
-    UseKeychain yes
-    IdentityFile ~/.ssh/bwg_id_rsa
+    Host github.com
+     AddKeysToAgent yes
+     UseKeychain yes
+     IdentityFile ~/.ssh/github_id_rsa
+    Host 104.194.69.135
+     AddKeysToAgent yes
+     UseKeychain yes
+     IdentityFile ~/.ssh/bwg_id_rsa
     ```
 
     add to ssh-agent， `-K Store passphrases in your keychain.`
@@ -80,6 +78,11 @@
     ssh-add -K
     ```
 
+    重启ssh-agent
+    
+    ```
+    killall ssh-agent; eval `ssh-agent`
+    ```
 3. [Add the SSH key to your GitHub account.](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account)
 
     ```
@@ -87,6 +90,11 @@
     ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDFQhwpYZzOoUc+ztzG6QJmexDIQecw0eQIpX33GcmIbnbv18dO+Muz/zCLCf3TMRu02XgB1dfqRvo+3sMzkXgEffnsf0BdHaWUwOVO1XxXhf7bXz4CpXHNc1Le//tuAYx5Wv/JmOfm5oLQD+c9VaoXQfJMODXXi7psmk17BJGrMMUexmgu2hKuG9jeY5woBKbTF4mbkjHpQHxj3HMlTH01c8yHcZQCtsVFgvoA3NUTWGgrHPWd2SLpp589huKfd9xNsjTMHkFwyBsWOfIUp/tI6+EggvQl7e53qxYhXA4GuDA+IAs3FC56nuyHFq0fU6HDLkZGk+0HhvdEwlAk1ON7alx17XDWhf5DeRpeK34uJBb4DhwxI1o5g2iTxYN95b9w+tGZmcNrB39C+30OYQCAr2LMlmX4oUnhf6ukZOiGeVs9gu8iv1e3ijcYLNaUmjhjTNIZ0k9xUxcR7ndy7gbe+4DWa1SLP1yeWqA4oTu2J8AKFQ/PkCz1pAUV+jiiDGRcXKxBt2n9UOA5aUDY+B6Nk1VW4h20lst4e7aYXBXYM6qE/GRA6EPMh8bI95YD5MeB3nTYYe1MLF93+248SvtbykzzLKXx2CgRALszvS/dZRwV7q6e1fAWA7nhK+IfOp1ma743NpdmXCzsLhN5B/kxPlwH/g9wSfX61MxMQ+75RQ== your_email@example.com
     ```
 
+    拷贝到剪切板命令
+    ```
+    pbcopy < ~/.ssh/id_rsa.pub
+    # Copies the contents of the id_rsa.pub file to your clipboard
+    ```
 ## ubuntu ssh 远程登录
 
 1. create ssh keys
