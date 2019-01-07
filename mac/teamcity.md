@@ -1,7 +1,15 @@
 # teamciy
 
-## install through docker
+## install java
 
+```
+brew cask install java
+brew tap caskroom/versions
+brew cask install java8
+```
+
+
+## install through docker
 ```
 docker run -it --name teamcity-server-instance  \
 -v <path to data directory>:/data/teamcity_server/datadir \
@@ -27,4 +35,3 @@ jetbrains/teamcity-server
 	cd ~/teamcity/buildAgent/bin/
 	./agent.sh start/stop/run/stop force
 	```
-	
