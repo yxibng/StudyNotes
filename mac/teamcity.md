@@ -35,3 +35,12 @@ jetbrains/teamcity-server
 	cd ~/teamcity/buildAgent/bin/
 	./agent.sh start/stop/run/stop force
 	```
+
+
+# 修改build number
+[How to change the current build number?](https://stackoverflow.com/questions/33384936/how-to-change-the-current-build-number)
+
+1. Go to the General Settings of the build configuration.
+2. Click the orange Show advanced options.
+3. Set the Build counter to your desired value.
+4. Set the Build number format to %build.counter%.
