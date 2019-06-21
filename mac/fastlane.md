@@ -9,7 +9,13 @@ $ rbenv install -l
 
 # install a Ruby version:
 $ rbenv install 2.6.0
+
+# set ruby version for global/local/shell
+$ rbenv global 2.6.0
+
 ```
+
+
 
 3. 安装fastlane 
 
