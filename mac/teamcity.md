@@ -15,6 +15,7 @@ docker run -it --name teamcity-server-instance  \
 -v <path to data directory>:/data/teamcity_server/datadir \
 -v <path to logs directory>:/opt/teamcity/logs  \
 -p <port on host>:8111 \
+--restart always \
 jetbrains/teamcity-server
 ```
 ## teamcity agent
