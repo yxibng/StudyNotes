@@ -143,7 +143,7 @@ four three  one
 one hundred
 ```
 
-删除第1-3行的one
+删除第1-3行的one
 ```
 $ cat file | sed '1,3 s/one//'
  two three, one two three
