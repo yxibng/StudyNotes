@@ -9,9 +9,9 @@ Sunnight
 
 ```
 
-### sed is line oriented
+### sed is line oriented
 
-默认只会更改每行的第一个匹配结果
+默认只会更改每行的第一个匹配结果
 
 ```bash
 $ cat file
@@ -60,7 +60,7 @@ ONE hundred
 ```
 
 
-在sed脚本里可以使用变量
+在sed脚本里可以使用变量
 
 ```bash
 var=one
@@ -76,7 +76,7 @@ ONE hundred
 
 
 
-### Delimiter
+### Delimiter
 
 There are four parts to this substitute command:
 
@@ -88,7 +88,7 @@ ONE	  Replacement string
 
 ```
 
-1. `/../../`为分隔符, 替换字符包含分隔符,需要转义
+1. `/../../`为分隔符, 替换字符包含分隔符,需要转义
 
     ```bash
     sed 's/\/usr\/local\/bin/\/common\/bin/' <old >new
@@ -100,11 +100,11 @@ ONE	  Replacement string
     sed 's_/usr/local/bin_/common/bin_' <old >new
     ```
     使用`:`做分隔符
-    ```bash
+    ```bash
     sed 's:/usr/local/bin:/common/bin:' <old >new
     ```
     使用`|`做分隔符
-    ```bash
+    ```bash
     sed 's|/usr/local/bin|/common/bin|' <old >new
     ```
 
@@ -153,7 +153,7 @@ four three two
 
 ### 使用模式匹配 ```sed '/start/,/stop/ s/#.*//'```
 
-匹配第一行到包含`four`那一行,替换`one`为`ONE`
+匹配第一行到包含`four`那一行,替换`one`为`ONE`
 ```bash
 $ cat file | sed '1,/four/ s/one/ONE/'
 ONE two three, one two three
@@ -195,7 +195,7 @@ $ cat file | sed '2,3 d'
 one two three, one two three
 ```
 
-从第2行开始删除到末尾
+从第2行开始删除到末尾
 
 ```bash
 $ cat file | sed '2,$ d'
@@ -203,9 +203,9 @@ one two three, one two three
 ```
 
 
-# a - Append 追加在行后
+# a - Append 追加在行后
 
-在包含`one`的行后追加一行
+在包含`one`的行后追加一行
 
 
 ```bash
@@ -229,7 +229,7 @@ add
 
 ```
 
-# i - Insert 插入在行前
+# i - Insert 插入在行前
 ```bash
 $ cat file | sed '/one/ i\
 pipe quote> inserted content!!!
@@ -242,7 +242,7 @@ inserted content!!!
 one hundred
 ```
 
-# c - Change 替换一整行
+# c - Change 替换一整行
 
 将包含`hundred`的行替换
 
@@ -263,4 +263,8 @@ replaced by change command!!!
 replaced by change command!!!
 replaced by change command!!!
 replaced by change command!!!
+```
+#  查找字符，替换为换行符
+```bash
+sed $'s/regexp/\\\n/g'
 ```
