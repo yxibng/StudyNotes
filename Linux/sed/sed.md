@@ -266,5 +266,5 @@ replaced by change command!!!
 ```
 #  查找字符，替换为换行符
 ```bash
-sed $'s/regexp/\\\n/g'
+sed 's/regexp/\'$'\n/g'
 ```
